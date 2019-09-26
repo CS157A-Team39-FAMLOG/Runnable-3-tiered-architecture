@@ -6,7 +6,7 @@
 
 <html>
     <head>
-        <title>Runnable 3-tier</title>
+        <title>FAMLOG</title>
     </head>
     <body>
         <h1>Runnable 3-tier Set up</h1>
