@@ -1,0 +1,34 @@
+<?php
+//Step1
+ $db = mysqli_connect('localhost','root','root','famlog')
+ or die('Error connecting to MySQL server.');
+?>
+
+<html>
+ <head>
+ </head>
+ <body>
+ <h1>PHP connected to MySQL</h1>
+
+<?php
+$sql = "SELECT * FROM personal";
+$result = mysqli_query($db, $sql);
+
+echo "Personal Items List";
+echo "<br>";
+
+if (mysqli_num_rows($result) > 0) {
+    // output data of each row
+    while($row = mysqli_fetch_assoc($result)) {
+        echo "| Name: " . $row["name"]. " | Quantity: " . $row["quantity"]. " | Priority: " . $row["priority"]. " | Notes: " . $row["notes"]. " | Date: " . $row["date"] . " |". "<br>";
+    }
+} else {
+    echo "0 results";
+}
+
+//Step 4
+mysqli_close($db);
+?>
+
+</body>
+</html>
