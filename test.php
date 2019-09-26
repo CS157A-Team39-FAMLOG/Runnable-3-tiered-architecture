@@ -5,11 +5,12 @@
 ?>
 
 <html>
- <head>
- </head>
- <body>
- <h1>PHP connected to MySQL</h1>
-
+    <head>
+        <title>Runnable 3-tier</title>
+    </head>
+    <body>
+        <h1>Runnable 3-tier Set up</h1>
+        <h2>PHP connected to MySQL</h2>
 <?php
 $sql = "SELECT * FROM personal";
 $result = mysqli_query($db, $sql);
